@@ -1,4 +1,4 @@
-from .models import Goods, GoodsCategory, GoodsImage, GoodsCategoryBrand, Banner, HotSearchWords
+from .models import Goods, GoodsCategory, GoodsCategoryBrand, Banner, HotSearchWords
 from .models import IndexAd
 
 from django.contrib import admin
@@ -13,17 +13,9 @@ class GoodsAdmin(admin.ModelAdmin):
                    "shop_price", "is_new", "is_hot", "add_time", "category__name"]
     style_fields = {"goods_desc": "ueditor"}
 
-'''class GoodsImagesInline(object):
-    model = GoodsImage
-    exclude = ["add_time"]
-    extra = 1
-    style = 'tab'
-
-    inlines = [GoodsImagesInline]
-'''
 @admin.register(GoodsCategory)
 class GoodsCategoryAdmin(admin.ModelAdmin):
-    list_display = ["name", "category_type", "parent_category", "add_time"]
+    list_display = ["name", "category_type", "add_time", "parent_category"]
     list_filter = ["category_type", "parent_category", "name"]
     search_fields = ['name', ]
 
