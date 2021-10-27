@@ -10,7 +10,7 @@ class GoodsListView(APIView):
     """
 
     def get(self, request, format=None):
-        goods = Goods.objects.all()[:10]
+        goods = Goods.objects.all()
         goods_serializer = GoodsSerializer(goods, many=True)
         return Response(goods_serializer.data)
 
