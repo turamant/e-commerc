@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
-__author__ = 'bobby'
+__author__ = 'askvart'
 
-# Independent use of django's model
+
 import sys
 import os
 
@@ -14,7 +13,6 @@ import django
 django.setup()
 
 from goods.models import GoodsCategory
-
 from db_tools.data.category_data import row_data
 
 for lev1_cat in row_data:
