@@ -8,9 +8,6 @@ from goods.models import Goods
 User = get_user_model()
 
 
-# Create your models here.
-
-
 class ShoppingCart(models.Model):
     """
 shopping cart
@@ -69,7 +66,7 @@ class OrderGoods(models.Model):
     """
 Product details of the order
     """
-    order = models.ForeignKey(OrderInfo, verbose_name="order information", related_name="goods", on_delete=models.CASCADE)
+    order = models.ForeignKey(OrderInfo, verbose_name="order inform", related_name="goods", on_delete=models.CASCADE)
     goods = models.ForeignKey(Goods, verbose_name="commodity", on_delete=models.CASCADE)
     goods_num = models.IntegerField(default=0, verbose_name="Number of Products")
 
