@@ -59,10 +59,10 @@ User delivery address
     """
     user = models.ForeignKey(User, verbose_name="user", on_delete=models.CASCADE)
     province = models.CharField(max_length=100, default="", verbose_name="Province ")
-    city = models.CharField(max_length=100, default="", verbose_name="city")
+    city = models.CharField(max_length=100, default="", verbose_name="City")
     district = models.CharField(max_length=100, default="", verbose_name="Area ")
-    address = models.CharField(max_length=100, default="", verbose_name="Address")
-    signer_name = models.CharField(max_length=100, default="", verbose_name="Signee ")
+    address = models.CharField(max_length=100, default="", verbose_name="Adres")
+    signer_name = models.CharField(max_length=100, default="", verbose_name="Sign")
     signer_mobile = models.CharField(max_length=11, default="", verbose_name="Phone ")
     add_time = models.DateTimeField(default=datetime.now, verbose_name="add time")
 
