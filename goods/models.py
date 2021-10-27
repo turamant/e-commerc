@@ -67,7 +67,7 @@ Commodities
     goods_num = models.IntegerField(default=0, verbose_name="Inventory")
     market_price = models.FloatField(default=0, verbose_name="market price")
     shop_price = models.FloatField(default=0, verbose_name="Our shop price")
-    goods_brief = models.TextField(max_length=500, verbose_name="Short description of the product")
+    goods_brief = models.TextField(max_length=500, verbose_name="Description of the product")
     ship_free = models.BooleanField(default=True, verbose_name="Whether to bear freight")
     goods_front_image = models.ImageField(upload_to="goods/images/", null=True, blank=True,
                                           verbose_name="cover picture")
@@ -101,7 +101,7 @@ class GoodsImage(models.Model):
 Merchandise carousel map
     """
     goods = models.ForeignKey(Goods, verbose_name="commodity", related_name="images", on_delete=models.CASCADE)
-    image = models.ImageField(upload_to="", verbose_name="Picture ", null=True, blank=True)
+    image = models.ImageField(upload_to="", verbose_name="Image ", null=True, blank=True)
     add_time = models.DateTimeField(default=datetime.now, verbose_name="add time")
 
     class Meta:
