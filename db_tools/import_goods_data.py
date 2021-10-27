@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-__author__ = 'bobby'
+__author__ = 'askvart'
 
 import sys
 import os
@@ -19,8 +18,8 @@ from db_tools.data.product_data import row_data
 for goods_detail in row_data:
     goods = Goods()
     goods.name = goods_detail["name"]
-    goods.market_price = float(int(goods_detail["market_price"].replace("￥", "").replace("yuan", "")))
-    goods.shop_price = float(int(goods_detail["sale_price"].replace("￥", "").replace("yuan", "")))
+    goods.market_price = float(int(goods_detail["market_price"].replace("$", "").replace("dollar", "")))
+    goods.shop_price = float(int(goods_detail["sale_price"].replace("$", "").replace("dollar", "")))
     goods.goods_brief = goods_detail["desc"] if goods_detail["desc"] is not None else ""
     goods.goods_desc = goods_detail["goods_desc"] if goods_detail["goods_desc"] is not None else ""
     goods.goods_front_image = goods_detail["images"][0] if goods_detail["images"] else ""
