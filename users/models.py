@@ -1,8 +1,6 @@
-# _*_coding:utf-8_*_
 from datetime import datetime
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-
 
 class UserProfile(AbstractUser):
     """
@@ -13,7 +11,7 @@ Users
     gender = models.CharField(max_length=6, choices=(("male", u"male"), ("female", "Female")), default="female",
                               verbose_name="gender")
     mobile = models.CharField(null=True, blank=True, max_length=11, verbose_name="phone")
-    email = models.EmailField(max_length=100, null=True, blank=True, verbose_name="mailbox")
+    email = models.EmailField(max_length=100, null=True, blank=True, verbose_name="e-mail")
 
     class Meta:
         verbose_name = "user"
