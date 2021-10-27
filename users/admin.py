@@ -11,7 +11,6 @@ class BaseSetting(object):
 class GlobalSettings(object):
     site_title = "Mu Student Fresh Background"
     site_footer = "mxshop"
-    # menu_style = "accordion"
 
 @admin.register(VerifyCode)
 class VerifyCodeAdmin(admin.ModelAdmin):
